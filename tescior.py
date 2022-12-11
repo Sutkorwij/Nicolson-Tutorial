@@ -4,6 +4,13 @@ con = sql.connect("testDb.db")
 
 cur = con.cursor()
 
-res = cur.execute("SELECT * FROM myTable;")
+res = cur.execute("SELECT * FROM myTable")
 
-res.fetchall()
+output = res.fetchall()
+
+print(output)
+
+#More advanced print out
+
+for row in output:
+    print(row)
